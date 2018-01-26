@@ -19,7 +19,7 @@ async function getScoreObjects(composerName){
 	
 };
 
-getScoreObjects("schumann");
+getScoreObjects("jsBach");
 
 
 //******************************
