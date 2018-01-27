@@ -8,17 +8,19 @@
 	<div>
 		<h1 id="title">UMD Comprehensive Exam Study Tool</h1>
 		<h2>ANSWER DISPLAYS HERE</h2>
+		<h3 id="num-of-works">0 Works Found</h3>
 		<button id="submit">Generate New Score</button>
 	</div>
 	<div id="genres">
-		<input class="genre" type="checkbox" name="Symphonies"><p>Symphonies</p>
-		<input class="genre" type="checkbox" name="Opera"><p>Opera</p>
-		<input class="genre" type="checkbox" name="Concertos"><p>Concertos</p>
+		<input class="genre check" type="checkbox" name="Masses"><p>Masses</p>
+		<input class="genre check" type="checkbox" name="Symphonies"><p>Symphonies</p>
+		<input class="genre check" type="checkbox" name="Operas"><p>Opera</p>
+		<input class="genre check" type="checkbox" name="Concertos"><p>Concertos</p>
 	</div>
 	<div id="composers">
-		<input class="composer" type="checkbox" name="perotin"><p>Perotin</p>
-		<input class="composer" type="checkbox" name="beethoven"><p>Beethoven</p>
-		<input class="composer" type="checkbox" name="mozart"><p>Mozart</p>
+		<input class="composer check" type="checkbox" name="perotin"><p>Perotin</p>
+		<input class="composer check" type="checkbox" name="beethoven"><p>Beethoven</p>
+		<input class="composer check" type="checkbox" name="mozart"><p>Mozart</p>
 	</div>
 	<div>
 		<iframe id="frame" src=""></iframe>
@@ -27,7 +29,8 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script type="text/javascript" src="./js/windowVariables.js"></script>
 	<script type="text/javascript" src="./js/genreSelector.js"></script>
-	<script type="text/javascript" src="./js/JSONFetcher.js"></script>
+	<script type="text/javascript" src="./js/composerSelector.js"></script>
+	<script type="text/javascript" src="./js/fetchJSON.js"></script>
 	<script type="text/javascript" src="./js/randomScore.js"></script>
 	<script type="text/javascript" src="./js/submitBtn.js"></script>
 

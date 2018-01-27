@@ -19,7 +19,14 @@ async function getScoreObjects(composerName){
 	
 };
 
-getScoreObjects("jsBach");
+
+for(composer in composers){
+	getScoreObjects(composer);	
+}	
+
+
+
+
 
 
 //******************************

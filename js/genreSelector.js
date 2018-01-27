@@ -2,10 +2,14 @@ let selectedTags = [];
 
 const genres = $(".genre");
 
-for(let i = 0; i < genres.length; i++){
-	selectedTags.push($(genres[i]).attr("name")) // currently sending all genres. make it so only when the genre is clicked;
+for(let i = 0; i < genres.length; i++){ 
+	genres[i].addEventListener("change", function(){
+		if($(this).is(":checked")){ // add genre to selectedTags if it is checked
+			selectedTags.push($(genres[i]).attr("name"));
+		} else { // filter out genre from selectedTags if it is unchecked
+			selectedTags = selectedTags.filter((genre) => { 
+				return genre !== $(genres[i]).attr("name");
+			})
+		}
+	});
 }
-
-// genres.forEach((genre) => {
-// 	console.log($(genre).attr("name"));
-// })
