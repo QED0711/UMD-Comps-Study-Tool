@@ -99,6 +99,19 @@ function getValidTagsFromWorkPage($){
 	return validTags;
 }
 
+function getDateFromWorkPage($){
+	const date = $(".wp_header td")
+	// console.log(date);
+	for(let i = 0; i < date.length; i++){
+		for(node of date[i].children){
+			if(node.type === "text" && node.data.match(/\d+/g) && node.data.match(/\d+/g)[0] > 1000){
+				return node.data.match(/\d+/g)[0]
+			}
+		}
+	}
+	return "N/A";
+}
+
 function getValidScoresFromWorkPage($){
 	const scoreDiv = $("#tabScore1 a");
   	let validScores = [];
@@ -121,11 +134,10 @@ async function getDataFromWorkPage(url){
 	const title = getTitleFromWorkPage($)
 	const composer = getComposerFromWorkPage($);
 	const validTags = getValidTagsFromWorkPage($);
+	const date = getDateFromWorkPage($);
 	const scores = getValidScoresFromWorkPage($);
-	// if(!title || !composer){
-	// 	return null;
-	// }
-	return {"composer" : composer, "title" : title, "tags" : validTags, "scores" : scores};
+	
+	return {"composer" : composer, "title" : title, "date" : date, "tags" : validTags, "scores" : scores};
 }
 
 async function imslpCrawler(composerArr){
@@ -142,8 +154,10 @@ async function imslpCrawler(composerArr){
 	let linkData, workData = [];
 	for(link of workLinks){
 		try {
+			// console.log(link);
 			linkData = await getDataFromWorkPage(link);	
 		} catch(err){
+			console.log("Error Retreiving Page")
 			workCount++;
 			linkData = null;
 		}
@@ -162,6 +176,25 @@ async function imslpCrawler(composerArr){
 	}
 	return workData;
 }
+
+// async function DateTester(){
+// 	// const body = await returnBody("http://imslp.org/wiki/Leonora_Overture_No.2%2C_Op.72a_(Beethoven%2C_Ludwig_van)");
+// 	// const $ = cheerio.load(body);
+// 	const date = $(".wp_header td")
+	
+// 	let currentTag;
+// 	for(let i = 0; i < date.length; i++){
+// 		currentTag = date[i]
+// 		for(node of date[i].children){
+// 			if(node.type === "text" && node.data.match(/\d+/g)){
+// 				return node.data.match(/\d+/g)[0]
+// 			}
+// 		}
+// 	}
+// 	return "N/A";
+// }
+
+// DateTester();
 
 module.exports = imslpCrawler;
 

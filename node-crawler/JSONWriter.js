@@ -20,6 +20,8 @@ async function getScoreObjects(composerName){
 };
 
 
+// getScoreObjects("lassus")
+
 for(composer in composers){
 	getScoreObjects(composer);	
 }	
@@ -29,9 +31,3 @@ for(composer in composers){
 
 
 
-//******************************
-
-
-// const perotinJSON = require("./perotinTest.json");
-
-// console.log(perotinJSON.length);
