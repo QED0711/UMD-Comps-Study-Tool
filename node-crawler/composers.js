@@ -101,36 +101,121 @@ const composers = {
 	// }/*,*/
 // ========== BAROQUE ========== 
 
-// ========== CLASSICAL ========== 
-	"gluck" : {
-		"name" : "gluck",
-		"chart" : ["http://imslp.org/index.php?title=Category:Gluck%2C%20Christoph%20Willibald&customcat=ccperson1"]
+	"caccini" : {
+		"name" : "caccini",
+		"chart" : ["http://imslp.org/index.php?title=Category:Caccini%2C%20Giulio&customcat=ccperson1"]
 	},
 
-	"cpebach" : {
-		"name" : "cpebach",
-		"chart" : ["http://imslp.org/index.php?title=Category:Bach%2C%20Carl%20Philipp%20Emanuel&customcat=ccperson1"]
+	"gabrieli" : {
+		"name" : "gabrieli",
+		"chart" : ["http://imslp.org/index.php?title=Category:Gabrieli%2C%20Giovanni&customcat=ccperson1"]
 	},
 
-	"haydn" : {
-		"name" : "haydn",
-		"chart" : ["http://imslp.org/index.php?title=Category:Haydn%2C%20Joseph&customcat=ccperson1"]
+	"monteverdi" : {
+		"name" : "monteverdi",
+		"chart" : ["http://imslp.org/index.php?title=Category:Monteverdi%2C%20Claudio&customcat=ccperson1"]
 	},
 
-	"stamitz" : {
-		"name" : "stamitz",
-		"chart" : ["http://imslp.org/index.php?title=Category:Stamitz%2C%20Carl%20Philipp&customcat=ccperson1"]
+	"frescobaldi" : {
+		"name" : "frescobaldi",
+		"chart" : ["http://imslp.org/index.php?title=Category:Frescobaldi%2C%20Girolamo&customcat=ccperson1"]
 	},
 
-	"mozart" : {
-		"name" : "mozart",
-		"chart" : ["http://imslp.org/index.php?title=Category:Mozart%2C%20Wolfgang%20Amadeus&customcat=ccperson1"]
+	"schutz" : {
+		"name" : "schutz",
+		"chart" : ["http://imslp.org/index.php?title=Category:Sch%C3%BCtz%2C%20Heinrich&customcat=ccperson1"]
 	},
-	
-	"beethoven" : {
-		"name" : "beethoven",
-		"chart" : ["http://imslp.org/index.php?title=Category:Beethoven%2C%20Ludwig%20van&customcat=ccperson1"]
+
+	"lully" : {
+		"name" : "lully",
+		"chart" : ["http://imslp.org/index.php?title=Category:Lully%2C%20Jean-Baptiste&customcat=ccperson1"]
+	},
+
+	"corelli" : {
+		"name" : "corelli",
+		"chart" : ["http://imslp.org/index.php?title=Category:Corelli%2C%20Arcangelo&customcat=ccperson1"]
+	},
+
+	"purcell" : {
+		"name" : "purcell",
+		"chart" : ["http://imslp.org/index.php?title=Category:Purcell%2C%20Henry&customcat=ccperson1"]
+	},
+
+	"ascarlatti" : {
+		"name" : "ascarlatti",
+		"chart" : ["http://imslp.org/index.php?title=Category:Scarlatti%2C%20Alessandro&customcat=ccperson1"]
+	},
+
+	"couperin" : {
+		"name" : "couperin",
+		"chart" : ["http://imslp.org/index.php?title=Category:Couperin%2C%20Fran%C3%A7ois&customcat=ccperson1"]
+	},
+
+	"vivaldi" : {
+		"name" : "vivaldi",
+		"chart" : ["http://imslp.org/index.php?title=Category:Vivaldi%2C%20Antonio&customcat=ccperson1"]
+	},
+
+	"telemann" : {
+		"name" : "telemann",
+		"chart" : ["http://imslp.org/index.php?title=Category:Telemann%2C%20Georg%20Philipp&customcat=ccperson1"]
+	},
+
+	"rameau" : {
+		"name" : "rameau",
+		"chart" : ["http://imslp.org/index.php?title=Category:Rameau%2C%20Jean-Philippe&customcat=ccperson1"]
+	},
+
+	"handel" : {
+		"name" : "handel",
+		"chart" : ["http://imslp.org/index.php?title=Category:Handel%2C%20George%20Frideric&customcat=ccperson1"]
+	},
+
+	"dscarlatti" : {
+		"name" : "dscarlatti",
+		"chart" : ["http://imslp.org/index.php?title=Category:Scarlatti%2C%20Domenico&customcat=ccperson1"]
+	},
+
+	"jsbach" : {
+		"name" : "jsbach",
+		"chart" : ["http://imslp.org/index.php?title=Category:Bach%2C%20Johann%20Sebastian&customcat=ccperson1"]
+	},
+
+	"pergolesi" : {
+		"name" : "pergolesi",
+		"chart" : ["http://imslp.org/index.php?title=Category:Pergolesi%2C%20Giovanni%20Battista&customcat=ccperson1"]
 	}/*,*/
+
+// ========== CLASSICAL ========== 
+	// "gluck" : {
+	// 	"name" : "gluck",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Gluck%2C%20Christoph%20Willibald&customcat=ccperson1"]
+	// },
+
+	// "cpebach" : {
+	// 	"name" : "cpebach",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Bach%2C%20Carl%20Philipp%20Emanuel&customcat=ccperson1"]
+	// },
+
+	// "haydn" : {
+	// 	"name" : "haydn",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Haydn%2C%20Joseph&customcat=ccperson1"]
+	// },
+
+	// "stamitz" : {
+	// 	"name" : "stamitz",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Stamitz%2C%20Carl%20Philipp&customcat=ccperson1"]
+	// },
+
+	// "mozart" : {
+	// 	"name" : "mozart",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Mozart%2C%20Wolfgang%20Amadeus&customcat=ccperson1"]
+	// },
+	
+	// "beethoven" : {
+	// 	"name" : "beethoven",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Beethoven%2C%20Ludwig%20van&customcat=ccperson1"]
+	// },
 // ========== ROMANTIC ========== 
 
 // ========== 20th Century ========== 
