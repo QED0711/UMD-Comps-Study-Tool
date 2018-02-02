@@ -1,0 +1,92 @@
+body {
+  background-color:rgb(54,54,54);
+}
+
+#main {
+  padding-bottom:10px;
+}
+
+#banner {
+  text-align:center;
+  margin-top:10px;
+  background-color:rgb(105,105,105);
+  border-radius:10px;
+  color:rgb(200,200,200);
+}
+
+.section-heading {
+  border-style:hidden hidden solid hidden;
+  border-width:2px;
+}
+
+label {
+  font-size:18px;
+}
+
+#genres {
+  margin-top:10px;
+  background-color:grey;
+  border-radius:10px;
+  margin-bottom:20px;
+}
+
+.period {
+  margin-top:10px;
+  border-radius:10px;
+}
+
+.check {
+  transform:scale(2);
+}
+
+.early {
+  background-color:rgb(214,127,127);
+}
+
+.baroque {
+  background-color:rgb(230,190,119);
+}
+
+.classical {
+  background-color:rgb(94,166,94);
+}
+
+.romantic {
+  background-color:rgb(131,131,197);
+}
+
+#work-info {
+  border-style:solid hidden hidden hidden;
+  border-color:rgb(183,183,183);
+}
+
+.imfo-text {
+  color:rgb(183,183,183);
+}
+
+.answer {
+  font-weight:300;
+}
+
+.button {
+  font-weight:800;
+  margin-right:5px;
+}
+
+.answer span {
+  font-style:oblique;
+  font-weight:bold;
+}
+
+#frame-container {
+  margin-top:10px;
+  background-color:rgba(125,125,235,0);
+}
+
+#frame {
+  width:100%;
+  height:100%;
+  min-height:52em;
+  max-height:1000px;
+}
+

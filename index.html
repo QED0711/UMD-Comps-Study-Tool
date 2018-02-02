@@ -1,39 +1,327 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>UMD Comprehensive Exam Study Tool</title>
-	<link rel="stylesheet" type="text/css" href="./style.css">
-</head>
-<body>
-	<div>
-		<h1 id="title">UMD Comprehensive Exam Study Tool</h1>
-		<h2>ANSWER DISPLAYS HERE</h2>
-		<h3 id="num-of-works">0 Works Found</h3>
-		<button id="submit">Generate New Score</button>
-	</div>
-	<div id="genres">
-		<input class="genre check" type="checkbox" name="Masses"><p>Masses</p>
-		<input class="genre check" type="checkbox" name="Motets"><p>Motets</p>
-		<input class="genre check" type="checkbox" name="Symphonies"><p>Symphonies</p>
-		<input class="genre check" type="checkbox" name="Operas"><p>Opera</p>
-		<input class="genre check" type="checkbox" name="Concertos"><p>Concertos</p>
-	</div>
-	<div id="composers">
-		<input class="composer check" type="checkbox" name="perotin"><p>Perotin</p>
-		<input class="composer check" type="checkbox" name="lassus"><p>Lassus</p>
-		<input class="composer check" type="checkbox" name="victoria"><p>Victoria</p>
-	</div>
-	<div>
-		<iframe id="frame" src=""></iframe>
-	</div>
-	
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-	<script type="text/javascript" src="./js/windowVariables.js"></script>
-	<script type="text/javascript" src="./js/genreSelector.js"></script>
-	<script type="text/javascript" src="./js/composerSelector.js"></script>
-	<script type="text/javascript" src="./js/fetchJSON.js"></script>
-	<script type="text/javascript" src="./js/randomScore.js"></script>
-	<script type="text/javascript" src="./js/submitBtn.js"></script>
 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Study</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="container" id="banner">
+            <h1>Comprehensive Exam Score Study Tool</h1>
+        </div>
+        <div class="container period early">
+            <h4 class="section-heading">Medieval &amp; Renaissance</h4>
+            <div class="checkbox"><label><input type="checkbox" id="earlyMaster">Med. &amp; Ren. Toggle</label></div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="perotin">Perotin</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="devitry">De Vitry</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="machaut">Machaut</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="dunstable">Dunstable</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="dufay">Dufay</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="binchois">Binchois</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="ockeghem">Ockeghem</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="josquin">Josquin des Prez</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="taverner">Taverner</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="tallis">Tallis</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="palestrina">Palestrina</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="lassus">Lassus</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="byrd">Byrd</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="victoria">Victoria</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="morley">Morley</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="dowland">Dowland</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="gesualdo">Gesualdo</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="praetorius">Praetorius</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="weelkes">Weelkes</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check early-check" name="gibbons">Gibbons</label></div>
+            </div>
+        </div>
+        <div class="container period baroque">
+            <h4 class="section-heading">Baroque </h4>
+            <div class="checkbox"><label><input type="checkbox" id="baroqueMaster">Baroque Toggle</label></div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="caccini">Caccini</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="gabrieli">Gabrieli</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="monteverdi">Monteverdi</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="frescobaldi">Frescobaldi</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="schutz">Schutz</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="lully">Lully</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="corelli">Corelli</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="purcell">Purcell</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="ascarlatti">A. Scarlatti</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="couperin">Couperin</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="vivaldi">Vivaldi</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="telemann">Telemann</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="rameau">Rameau</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="handel">Handel</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="dscarlatti">D. Scarlatti</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="jsbach">J.S. Bach</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check baroque-check" name="pergolesi">Pergolesi</label></div>
+            </div>
+        </div>
+        <div class="container period classical">
+            <h4 class="section-heading">Classical </h4>
+            <div class="checkbox"><label><input type="checkbox" id="classicalMaster">Classical Toggle</label></div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="gluck">Gluck</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="cpebach">C.P.E. Bach</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="haydn">Haydn</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="stamitz">Stamitz</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="mozart">Mozart</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check classical-check" name="beethoven">Beethoven</label></div>
+            </div>
+        </div>
+        <div class="container period romantic">
+            <h4 class="section-heading">Romantic </h4>
+            <div class="checkbox"><label><input type="checkbox" id="romanticMaster">Romantic Toggle</label></div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="paganini">Paganini</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="meyerbeer">Meyerbeer</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="rossini">Rossini</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="schubert">Schubert</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="donizetti">Donizetti</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="bellini">Bellini</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="berlioz">Berlioz</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="mendelssohn">Mendelssohn</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="schumann">Schumann</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="chopin">Chopin</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="liszt">Liszt</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="wagner">Wagner</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="verdi">Verdi</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="gounod">Gounod</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="offenbach">Offenbach</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="franck">Franck</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="smetana">Smetana</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="bruckner">Bruckner</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="brahms">Brahms</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="borodin">Borodin</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="saintsaens">Saint-Saens</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="bizet">Bizet</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="mussorgsky">Mussorgsky</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="tchaikovsky">Tchaikovsky</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="dvorak">Dvorak</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="grieg">Grieg</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label style="font-size:16px;"><input type="checkbox" class="composer check romantic-check" name="rimskykorsakov">Rimsky-Korsakov</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="faure">Faure</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="elgar">Elgar</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="puccini">Puccini</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="wolf">Wolf</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="rstrauss">R-Strauss</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6 composer-box">
+                <div class="checkbox"><label><input type="checkbox" class="composer check romantic-check" name="rachmaninoff">Rachmaninoff</label></div>
+            </div>
+        </div>
+        <div class="container" id="genres">
+            <h4 class="section-heading">Genre Filters (optional)</h4>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Masses">Masses</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Motets">Motets</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Symphonies">Symphonies</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Concertos">Concertos</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Sonatas">Sonatas</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Operas">Operas</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Lieder">Lieder</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="Quartets">Quartets</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="For keyboard">For Keyboard</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="For piano">For Piano</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="For harpsichord">For Harpsichord</label></div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-4 col-xs-6">
+                <div class="checkbox"><label><input type="checkbox" class="genre check" name="For organ">For Organ</label></div>
+            </div>
+        </div>
+        <div class="container current" id="work-info">
+            <h2 id="num-of-works" class="imfo-text">Works matching your selection: 0</h2><button class="btn btn-default button" type="button" id="submit">Find New Score</button><button class="btn btn-default button" type="button" id="showAnswer">Click to Show Answer</button>
+            <h4 class="answer imfo-text">Composer: <span id="answer-composer"> </span></h4>
+            <h4 class="answer imfo-text">Work: <span id="answer-title"> </span></h4>
+            <h4 class="answer imfo-text">Written / Published: <span id="answer-date"> </span></h4>
+            <h4 class="answer imfo-text">Genres: <span id="answer-tags"> </span></h4>
+        </div>
+        <div class="container" id="frame-container">
+            <div>
+    <iframe id="frame" class="hidden" src="" onerror="console.log('error!!!')"></iframe>
+</div>
+            <section></section>
+        </div>
+    </div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/composerSelector.js"></script>
+    <script src="assets/js/fetchJSON.js"></script>
+    <script src="assets/js/frameClick.js"></script>
+    <script src="assets/js/genreSelector.js"></script>
+    <script src="assets/js/masterChecks.js"></script>
+    <script src="assets/js/randomScore.js"></script>
+    <script src="assets/js/submitBtn.js"></script>
+    <script src="assets/js/windowVariables.js"></script>
 </body>
+
 </html>
