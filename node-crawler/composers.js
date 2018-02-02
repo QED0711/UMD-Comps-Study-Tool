@@ -116,10 +116,10 @@ const composers = {
 	// 	"chart" : ["http://imslp.org/index.php?title=Category:Monteverdi%2C%20Claudio&customcat=ccperson1"]
 	// },
 
-	"frescobaldi" : {
-		"name" : "frescobaldi",
-		"chart" : ["http://imslp.org/index.php?title=Category:Frescobaldi%2C%20Girolamo&customcat=ccperson1"]
-	}/*,*/
+	// "frescobaldi" : {
+	// 	"name" : "frescobaldi",
+	// 	"chart" : ["http://imslp.org/index.php?title=Category:Frescobaldi%2C%20Girolamo&customcat=ccperson1"]
+	// },
 
 	// "schutz" : {
 	// 	"name" : "schutz",
@@ -217,6 +217,176 @@ const composers = {
 	// 	"chart" : ["http://imslp.org/index.php?title=Category:Beethoven%2C%20Ludwig%20van&customcat=ccperson1"]
 	// },
 // ========== ROMANTIC ========== 
+
+	"paganini" : {
+		"name" : "paganini",
+		"chart" : ["http://imslp.org/index.php?title=Category:Paganini%2C%20Niccol%C3%B2&customcat=ccperson1"]
+	},
+
+	"meyerbeer" : {
+		"name" : "meyerbeer",
+		"chart" : ["http://imslp.org/index.php?title=Category:Meyerbeer%2C%20Giacomo&customcat=ccperson1"]
+	},
+
+	"rossini" : {
+		"name" : "rossini",
+		"chart" : ["http://imslp.org/index.php?title=Category:Rossini%2C%20Gioacchino&customcat=ccperson1"]
+	},
+
+	"schubert" : {
+		"name" : "schubert",
+		"chart" : ["http://imslp.org/index.php?title=Category:Schubert%2C%20Franz&customcat=ccperson1"]
+	},
+
+	"donizetti" : {
+		"name" : "donizetti",
+		"chart" : ["http://imslp.org/index.php?title=Category:Donizetti%2C%20Gaetano&customcat=ccperson1"]
+	},
+
+	"bellini" : {
+		"name" : "bellini",
+		"chart" : ["http://imslp.org/index.php?title=Category:Bellini%2C%20Vincenzo&customcat=ccperson1"]
+	},
+
+	"berlioz" : {
+		"name" : "berlioz",
+		"chart" : ["http://imslp.org/index.php?title=Category:Berlioz%2C%20Hector&customcat=ccperson1"]
+	},
+
+	"mendelssohn" : {
+		"name" : "mendelssohn",
+		"chart" : ["http://imslp.org/index.php?title=Category:Mendelssohn%2C%20Felix&customcat=ccperson1"]
+	},
+
+	"schumann" : {
+		"name" : "schumann",
+		"chart" : ["http://imslp.org/index.php?title=Category:Schumann%2C%20Robert&customcat=ccperson1"]
+	},
+
+	"chopin" : {
+		"name" : "chopin",
+		"chart" : ["http://imslp.org/index.php?title=Category:Chopin%2C%20Fr%C3%A9d%C3%A9ric&customcat=ccperson1"]
+	},
+
+	"liszt" : {
+		"name" : "liszt",
+		"chart" : ["http://imslp.org/index.php?title=Category:Liszt%2C%20Franz&customcat=ccperson1"]
+	},
+
+	"wagner" : {
+		"name" : "wagner",
+		"chart" : ["http://imslp.org/index.php?title=Category:Wagner%2C%20Richard&customcat=ccperson1"]
+	},
+
+	"verdi" : {
+		"name" : "verdi",
+		"chart" : ["http://imslp.org/index.php?title=Category:Verdi%2C%20Giuseppe&customcat=ccperson1"]
+	},
+
+	"gounod" : {
+		"name" : "gounod",
+		"chart" : ["http://imslp.org/index.php?title=Category:Gounod%2C%20Charles&customcat=ccperson1"]
+	},
+
+	"offenbach" : {
+		"name" : "offenbach",
+		"chart" : ["http://imslp.org/index.php?title=Category:Offenbach%2C%20Jacques&customcat=ccperson1"]
+	},
+
+	"franck" : {
+		"name" : "franck",
+		"chart" : ["http://imslp.org/index.php?title=Category:Franck%2C%20C%C3%A9sar&customcat=ccperson1"]
+	},
+
+	"smetana" : {
+		"name" : "smetana",
+		"chart" : ["http://imslp.org/index.php?title=Category:Smetana%2C%20Bed%C5%99ich&customcat=ccperson1"]
+	},
+
+	"bruckner" : {
+		"name" : "bruckner",
+		"chart" : ["http://imslp.org/index.php?title=Category:Bruckner%2C%20Anton&customcat=ccperson1"]
+	},
+
+	"brahms" : {
+		"name" : "brahms",
+		"chart" : ["http://imslp.org/index.php?title=Category:Brahms%2C%20Johannes&customcat=ccperson1"]
+	},
+
+	"borodin" : {
+		"name" : "borodin",
+		"chart" : ["http://imslp.org/index.php?title=Category:Borodin%2C%20Aleksandr&customcat=ccperson1"]
+	},
+
+	"saintsaens" : {
+		"name" : "saintsaens",
+		"chart" : ["http://imslp.org/index.php?title=Category:Saint-Sa%C3%ABns%2C%20Camille&customcat=ccperson1"]
+	},
+
+	"bizet" : {
+		"name" : "bizet",
+		"chart" : ["http://imslp.org/index.php?title=Category:Bizet%2C%20Georges&customcat=ccperson1"]
+	},
+
+	"mussorgsky" : {
+		"name" : "mussorgsky",
+		"chart" : ["http://imslp.org/index.php?title=Category:Mussorgsky%2C%20Modest&customcat=ccperson1"]
+	},
+
+	"tchaikovsky" : {
+		"name" : "tchaikovsky",
+		"chart" : ["http://imslp.org/index.php?title=Category:Tchaikovsky%2C%20Pyotr&customcat=ccperson1"]
+	},
+
+	"dvorak" : {
+		"name" : "dvorak",
+		"chart" : ["http://imslp.org/index.php?title=Category:Dvo%C5%99%C3%A1k%2C%20Anton%C3%ADn&customcat=ccperson1"]
+	},
+
+	"grieg" : {
+		"name" : "grieg",
+		"chart" : ["http://imslp.org/index.php?title=Category:Grieg%2C%20Edvard&customcat=ccperson1"]
+	},
+
+	"rimskykorsakov" : {
+		"name" : "rimskykorsakov",
+		"chart" : ["http://imslp.org/index.php?title=Category:Rimsky-Korsakov%2C%20Nikolay&customcat=ccperson1"]
+	},
+
+	"faure" : {
+		"name" : "faure",
+		"chart" : ["http://imslp.org/index.php?title=Category:Faur%C3%A9%2C%20Gabriel&customcat=ccperson1"]
+	},
+
+	"elgar" : {
+		"name" : "elgar",
+		"chart" : ["http://imslp.org/index.php?title=Category:Elgar%2C%20Edward&customcat=ccperson1"]
+	},
+
+	"puccini" : {
+		"name" : "puccini",
+		"chart" : ["http://imslp.org/index.php?title=Category:Puccini%2C%20Giacomo&customcat=ccperson1"]
+	},
+
+	"wolf" : {
+		"name" : "wolf",
+		"chart" : ["http://imslp.org/index.php?title=Category:Wolf%2C%20Hugo&customcat=ccperson1"]
+	},
+
+	"mahler" : {
+		"name" : "mahler",
+		"chart" : ["http://imslp.org/index.php?title=Category:Mahler%2C%20Gustav&customcat=ccperson1"]
+	},
+
+	"rstrauss" : {
+		"name" : "rstrauss",
+		"chart" : ["http://imslp.org/index.php?title=Category:Strauss%2C%20Richard&customcat=ccperson1"]
+	},
+
+	"rachmaninoff" : {
+		"name" : "rachmaninoff",
+		"chart" : ["http://imslp.org/index.php?title=Category:Rachmaninoff%2C%20Sergei&customcat=ccperson1"]
+	}/*,*/
 
 // ========== 20th Century ========== 
 
