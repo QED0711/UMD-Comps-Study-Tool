@@ -118,8 +118,8 @@ function getValidScoresFromWorkPage($){
 
   	for(index in scoreDiv){
     	if(scoreDiv[index]['children'] && scoreDiv[index]['children'][0] && scoreDiv[index]['children'][0]['children'] && scoreDiv[index]['children'][0]['children'][1] && scoreDiv[index]['children'][0]['children'][1]['data']){
-      	let scoreLinks = (scoreDiv[index]['children'][0]['children'][1]['data'].split(" ").map(x => x.toLowerCase()))
-      		if(scoreLinks.includes('complete') && scoreLinks.includes('score')){
+    	let scoreLinks = scoreDiv[index]['children'][0]['children'][1]['data'] // updated version of scoreLinks
+      		if(/(((complete|full) score)|([XVI]+\.?)|(\d+\.))/gi.test(scoreLinks) && !/(part)|(cover)/gi.test(scoreLinks)){ // change here 
         		validScores.push(scoreDiv[index]['attribs']['href']);
       		}
     	}
@@ -177,24 +177,7 @@ async function imslpCrawler(composerArr){
 	return workData;
 }
 
-// async function DateTester(){
-// 	// const body = await returnBody("http://imslp.org/wiki/Leonora_Overture_No.2%2C_Op.72a_(Beethoven%2C_Ludwig_van)");
-// 	// const $ = cheerio.load(body);
-// 	const date = $(".wp_header td")
-	
-// 	let currentTag;
-// 	for(let i = 0; i < date.length; i++){
-// 		currentTag = date[i]
-// 		for(node of date[i].children){
-// 			if(node.type === "text" && node.data.match(/\d+/g)){
-// 				return node.data.match(/\d+/g)[0]
-// 			}
-// 		}
-// 	}
-// 	return "N/A";
-// }
 
-// DateTester();
 
 module.exports = imslpCrawler;
 
